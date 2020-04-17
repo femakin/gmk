@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+  <!-- <link rel="stylesheet" href="style.css">
+   <script type="text/javascript"  src="game.js"></script>   -->
+
+
+
+<style type="text/css">
+	
+* {
+  box-sizing: border-box;
+}
+
+
+
+
+
+
+
+#frm{
+    max-width: 1170px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+  margin-top: 5%;
+  margin-left: 30%;
+
+}
+
+
+#fsubmit{
+    visibility: visible;
+}
+body {
+  margin: 0;
+  font-family: "Lucida Grande";
+  background-color: pink;
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+
+
+
+.form-content > label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.form-content > input
+ {
+  background-color: #edf2f7;
+  border: none;
+  padding: 13px;
+  width: 30%;
+  outline-style: none;
+  outline-color: rgb(26, 32, 44);
+}
+
+
+
+
+
+
+
+
+
+.btn {
+  padding: 12px 24px;
+  color: green;
+  display: inline-block;
+  opacity: 3.0;
+  border-radius: 4px;
+  text-align: center;
+}
+.bt {
+  padding: 12px 24px;
+  color: green;
+  display: inline-block;
+  opacity: 3.0;
+  border-radius: 4px;
+  text-align: center;
+}
+
+#fsubmit{
+    visibility: hidden;
+    background: grey;
+ 
+    width: 200px;
+    font-size: 30px;
+    padding: 0 15px;
+  margin: 0 auto;
+}
+
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+
+.finput{
+  width: 80%;
+  background-color: yellow;
+}
+.finput .heading1 {
+    text-align: block;
+    font-size: 12px;
+    line-height: 36px;
+    background-color: blue;
+    width: 60%;
+  }
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+</head>
+
+
+<body>
+    <main>
+<div class="container" >
+
+<div id="logo">     
+<h1 class="Heading" id="logo1"> <img src="https://www.kidsmathgamesonline.com/images/headings/logo.jpg"></h1>
+</div>
+<section class="section-b">
+        <div class="b-heading">
+          <h1>Addition Quiz for Kids</h1>
+<p>Put your math skills to the test with this little 
+addition quiz for kids. Answer questions <br> on different 
+range of basic addition problems that will challenge your math ability. How many can you answer correctly? Give it a go and find out!</p>
+
+        </div>
+ <div class="form-containeer">
+          
+    <div  class="bg">
+        <div  id="man"  class="content">
+      
+          <form name="game" id="game" >
+  
+          <div class="form-content">
+          <label> Q1. 17 + 45 = </label>
+          <input type="number" name="q1" id= "q" value="" >
+      </div>
+<div class="form-content">
+<label> Q2. 10 + 0 = </label>
+<input type="number" name="q2" id= "q" value="" >
+
+</div>
+<div class="form-content">
+<label> Q3. 14 + 17 = </label>
+<input type="number" name="q3" id= "q" value="" >
+
+</div>
+<div class="form-content">
+<label> Q4. 9 + 0 = </label>
+<input type="number" name="q4" id= "q" value="q4" >
+
+</div>
+
+<div class="form-content">
+<label> Q5. 14 + 1 = </label>
+<input type="number" name="q5" id= "q" value="q5" >
+</div>
+
+<div class="form-content">
+<label> Q6. 7 + 13 = </label>
+<input type="number" name="q6" id= "q" value="q6" >
+
+</div>
+<div class="form-content">
+<label> Q7. 6 + 15 = </label>
+<input type="number" name="q7" id= "q" value="q7" >
+
+</div>
+<div class="form-content">
+<label> Q8. 7 + 1 = </label>
+<input type="number" name="q8" id= "q" value="q8" >
+
+</div>
+<div class="form-content">
+<label> Q9. 12 + 7 = </label>
+<input type="number" name="q9" id= "q" value="q9" >
+
+</div>
+<div class="form-content">
+<label> Q10. 10 + 10 = </label>
+<input type="number" name="q10" id= "q" value="q10" >
+</div>
+
+
+
+
+
+<br> <br>
+<input class="btn" type="button" name="" onclick="quiz();" value="Submit">
+ <button class="bt" type="reset" value="reset" form="game" >  Reset </button>
+</form>
+
+
+
+
+
+
+        </div>
+    </div>
+    
+        </div>
+
+</div>
+
+
+
+
+<div  id="fsubmit"  >          
+<p id="nscore"></p>
+<p id="answers"></p>
+<h2 id="msg"></h2>
+<h3 id ="pic"></h3>
+
+ </div>   
+ 
+
+
+<script type="text/javascript">
+	
+
+
+function quiz() {
+	// body...
+	
+	var q1 = document.getElementById('game').q1.value;
+	var q2 = document.getElementById("game").q2.value;
+	var q3 = document.getElementById("game").q3.value;
+	var q4 = document.getElementById("game").q4.value;
+	var q5 = document.getElementById("game").q5.value;
+	var q6 = document.getElementById("game").q6.value;
+	var q7 = document.getElementById("game").q7.value;
+	var q8 = document.getElementById("game").q8.value;
+	var q9 = document.getElementById("game").q9.value;
+	var q10 = document.getElementById("game").q10.value;
+	var score = 0;
+if (q1 == 62) {
+	score++;
+}
+if (q2 == 10) {
+	score++;
+}
+if (q3 == 31) {
+	score++;
+}
+if (q4 == 9) {
+	score++;
+}
+if (q5 == 15) {
+	score++;
+}
+if (q6 == 20) {
+	score++;
+}
+if (q7 == 21) {
+	score++;
+}
+if (q8 == 8) {
+	score++;
+}
+if (q9 == 19) {
+	score++;
+}
+if (q10 == 20) {
+	score++;
+}
+
+
+var message = ["Bravo! you can do better.", "Not good enough.", 
+"You need to study more on addition.", "Too Bad!"];
+for (var i = 0; i < message.length; i++) {
+	}
+if (score == 8 || score <= 10 ) {
+	message[i = 0];
+}
+if (score == 6 || score <= 7) {
+	message[i = 1];
+}
+if (score == 3 || score <= 5) {
+	message[i = 2];
+}
+if (score == 0 || score <= 2) {
+	message[i = 3];
+}
+
+
+
+
+
+
+
+document.getElementById("fsubmit").style.visibility = "visible";
+document.getElementById("nscore").innerHTML = "your score is " + score +" " + "out of ten questions";
+document.getElementById("answers").innerHTML = "Answers: 1. 62, 2. 10, 3. 31, 4. 9, 5. 15, 6. 20, 7. 21, 8. 8, 9. 19, 10. 20";
+ document.getElementById("msg").innerHTML = message[i];
+
+	// body...
+	
+}
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</main>
+</body>
+</html>
+
+
+
+
+
